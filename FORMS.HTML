@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In Page</title>
+<style>
+    * {
+        margin: 0;
+    padding: 0;
+    
+}
+         body{
+         /* background-image: linear-gradient 45deg, rgb(206, 64, 119), rgb(48, 48, 174); */
+         background-image: linear-gradient(45deg, rgb(22, 67, 33),rgb(51, 32, 62));
+         width: 100%;
+    height: 100vh;
+  }
+
+    .navbar{
+            width: 100%;
+            height: 20px;
+            display: flex;
+            justify-content: space-evenly;
+            padding: 20px;
+            background-color: aqua;
+            align-items: center;
+            text-decoration: none;
+
+        }
+
+        
+
+    .navlinks {
+         text-decoration: none; */
+        list-style: none;
+        display: flex;
+        gap: 20px;
+    }
+
+    .navlinks a {
+        text-decoration: none;
+        color: black;
+        font-size: 15px;
+        list-style: none;
+    }
+
+    .nav {
+        width :70px;
+        height: 30px;
+        border-radius: 10px;
+        text-decoration: none;
+    }
+
+    ul {
+list-style: none;
+
+    }
+
+     .container{
+            width: 100%;
+            height: 100vh;
+            text-align: center;
+            border: 5px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+
+         }
+         form {
+            width: 100%;
+            font-size: 20px;
+            border: 1px solid black;
+            padding: 20px;
+            border-radius: 12px;
+            color: rgb(24, 160, 219);
+         }
+         .btn {
+            border: 1px;
+            border-radius: 12px;
+         }
+  </style>
+
+</head>
+<body>
+
+    
+ <nav class="navbar">
+        
+        <a href="/" style="text-decoration: none;"><img src="images/twitter.svg" alt="" class="left-img" height="50px"; width="50px"; >
+</a>
+        
+        
+        <ul class="navlinks">
+            
+<!--         
+        <li><a href="index.html">Home</a></li>
+<li><a href="jdjd.html">Contact Us</a></li>
+<li><a href="index3.html">About Us</a></li>
+<li><a href=""></a></li>
+ <li><a href="http://">Service</a></li>
+<button class="nav">Click Me</button> --> 
+
+        </ul>
+
+<div class="btn">
+        <a href="FORMS.HTML"><button style="border: 10px; border-radius: 50px; background-color: bisque;">Sign Up</button></a>
+    <a href="login.html"><button style="background-color: blanchedalmond; border: 10px; border-radius: 15px;">Login</button></a>
+    
+</div>
+
+        
+        </nav>
+
+        <div class="container">
+
+            <div class="form">
+
+        
+         <form action="/api/v1/login-page" method="post">
+            <h1>Sign In</h1>
+    
+    <br>
+        <label for="main-title"> First Name</label>
+        <br>
+    
+        <input id="main-title" type="text" name="title" placeholder="e.g:John" minlength="3" required>
+
+        <br>
+        <label for="">Last Name</label>
+        <br>
+        <input type="text" id="lname" placeholder="e.g:Wick">
+        <br>
+        <label for="">EMAIL</label>
+        <br>
+        <input type="text" id="@gmail" placeholder="example@gmail.com">
+        <br>
+        <label for="">Password</label>
+        <br>
+        <input type="text" id="Password" placeholder="Password">
+        <br>
+        <label for="">Date and Time</label>
+        <br>
+        <input type="date" name="" id="date" >
+        <input type="time" id="time">
+        <br>
+        <button type="submit" style="color: rgb(241, 206, 31); background-color: rgb(3, 54, 6);">Submit</button>
+
+
+    </form>
+
+    </div>
+    </div>
+
+</body>
+</html>
