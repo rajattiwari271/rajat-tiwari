@@ -1,147 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign In Page</title>
-<style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Page</title>
+
+  <style>
     * {
-        margin: 0;
-    padding: 0;
-    
-}
-         body{
-         /* background-image: linear-gradient 45deg, rgb(206, 64, 119), rgb(48, 48, 174); */
-         background-image: linear-gradient(45deg, rgb(22, 67, 33),rgb(51, 32, 62));
-         width: 100%;
-    height: 100vh;
-  }
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
 
-    .navbar{
-            width: 100%;
-            height: 20px;
-            display: flex;
-            justify-content: space-evenly;
-            padding: 20px;
-            background-color: aqua;
-            align-items: center;
-            text-decoration: none;
+    body {
+      background-image: linear-gradient(45deg, rgb(22, 67, 33), rgb(51, 32, 62));
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
 
-        }
+    /* NAVBAR */
+    .navbar {
+      width: 100%;
+      padding: 15px 40px;
+      background-color: #a0f7f3;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
 
-        
+    .navbar img {
+      height: 45px;
+    }
 
     .navlinks {
-         text-decoration: none; */
-        list-style: none;
-        display: flex;
-        gap: 20px;
+      display: flex;
+      list-style: none;
+      gap: 20px;
     }
 
     .navlinks a {
-        text-decoration: none;
-        color: black;
-        font-size: 15px;
-        list-style: none;
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      transition: color 0.3s;
     }
 
-    .nav {
-        width :70px;
-        height: 30px;
-        border-radius: 10px;
-        text-decoration: none;
+    .navlinks a:hover {
+      color: #0a6b4b;
     }
 
-    ul {
-list-style: none;
-
+    .btn button {
+      padding: 8px 18px;
+      margin-left: 10px;
+      border: none;
+      border-radius: 20px;
+      background-color: #0a6b4b;
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
     }
 
-     .container{
-            width: 100%;
-            height: 100vh;
-            text-align: center;
-            border: 5px solid black;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            
+    .btn button:hover {
+      background-color: #14b86e;
+    }
 
-         }
-         form {
-            width: 100%;
-            font-size: 20px;
-            border: 1px solid black;
-            padding: 20px;
-            border-radius: 12px;
-            color: rgb(24, 160, 219);
-         }
+    /* MAIN CONTAINER */
+    .container {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    /* FORM */
+    form {
+      width: 100%;
+      max-width: 400px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(12px);
+      padding: 35px;
+      border-radius: 20px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      color: #fff;
+      text-align: center;
+    }
+
+    form h1 {
+      margin-bottom: 20px;
+      color: #ffd83d;
+      font-size: 2rem;
+    }
+
+    form label {
+      display: block;
+      text-align: left;
+      margin: 10px 0 5px;
+      font-weight: 600;
+    }
+
+    form input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+      margin-bottom: 15px;
+      font-size: 1rem;
+    }
+
+    form input:focus {
+      box-shadow: 0 0 8px #ffd83d;
+    }
+
+    form button {
+      width: 100%;
+      padding: 12px;
+      background-color: #ffd83d;
+      border: none;
+      border-radius: 25px;
+      color: #333;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    form button:hover {
+      background-color: #ffef77;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 600px) {
+      .navbar {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      form {
+        width: 90%;
+      }
+    }
   </style>
-
 </head>
+
 <body>
-    
- <nav class="navbar">
-        
-        <a href="/" style="text-decoration: none;">logo</a>
-        
-        <img src="images/twitter.svg" alt="" class="left-img" height="50px"; width="50px"; >
+  <nav class="navbar">
+    <a href="/" style="text-decoration: none; color: black; font-weight: bold;">Logo</a>
+    <img src="images/twitter.svg" alt="Logo Icon" />
+    <div class="btn">
+      <a href="FORMS.HTML"><button>Sign Up</button></a>
+      <a href="login.html"><button>Login</button></a>
+    </div>
+  </nav>
 
-        <ul class="navlinks">
-            
-<!--         
-        <li><a href="index.html">Home</a></li>
-<li><a href="jdjd.html">Contact Us</a></li>
-<li><a href="index3.html">About Us</a></li>
-<li><a href=""></a></li>
- <li><a href="http://">Service</a></li>
-<button class="nav">Click Me</button> --> 
+  <div class="container">
+    <form action="/api/v1/login-page" method="post">
+      <h1>Login</h1>
 
-        </ul>
+      <label for="username">Username</label>
+      <input id="username" type="text" name="username" placeholder="e.g. John" minlength="3" required />
 
-<div class="btn">
-    
-    <a href="FORMS.HTML"><button>Sign Up</button></a>
-    <a href="login.html"><button>Login</button></a>
-    
-</div>
+      <label for="email">Email</label>
+      <input id="email" type="email" name="email" placeholder="example@gmail.com" required />
 
-        
-        </nav>
+      <label for="password">Password</label>
+      <input id="password" type="password" name="password" placeholder="Enter password" required />
 
-        <div class="container">
-
-            <div class="form">
-
-        
-         <form action="/api/v1/login-page" method="post">
-            <h1>Login</h1>
-    
-    <br>
-        <label for="main-title"> Username</label>
-        <br>
-    
-        <input id="main-title" type="text" name="title" placeholder="e.g:John" minlength="3" required>
-
-        <br>
-        
-        <label for="">EMAIL</label>
-        <br>
-        <input type="text" id="@gmail" placeholder="example@gmail.com">
-        <br>
-        <label for="">Password</label>
-        <br>
-        <input type="text" id="Password" placeholder="Password">
-        <br>
-        
-        <br>
-        <button type="login" style="color: rgb(241, 206, 31); background-color: rgb(3, 54, 6);">Login</button>
-
-
+      <button type="submit">Login</button>
     </form>
-
-    </div>
-    </div>
-
+  </div>
 </body>
 </html>
