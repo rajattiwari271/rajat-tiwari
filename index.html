@@ -1,82 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rajat's Shinchan Page</title>
 
-    <style>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-* {
-        margin: 0;
-    padding: 0;
-    
-}
-         body{
-         /* background-image: linear-gradient 45deg, rgb(206, 64, 119), rgb(48, 48, 174); */
-         background-image: linear-gradient(45deg, rgb(206, 64, 119),rgb(48, 48, 174));
-         width: 100%;
-    height: 100vh;
-    overflow-x: hidden;
-  }
+    body {
+      background-image: linear-gradient(45deg, rgb(206, 64, 119), rgb(48, 48, 174));
+      font-family: "Poppins", sans-serif;
+      overflow-x: hidden;
+      color: #222;
+    }
 
-        .navbar{
-            width: 100%;
-            height: 20px;
-            display: flex;
-            justify-content: space-around;
-            padding: 20px;
-            background-color: aqua;
-            align-items: center;
-            text-decoration: none;
+    /* NAVBAR */
+    .navbar {
+      width: 100%;
+      padding: 15px 40px;
+      background-color: #ffeb99;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    }
 
-        }
-
-        
+    .navbar img {
+      height: 45px;
+    }
 
     .navlinks {
-         text-decoration: none; */
-        list-style: none;
-        display: flex;
-        gap: 20px;
+      display: flex;
+      gap: 25px;
+      list-style: none;
     }
 
     .navlinks a {
-        text-decoration: none;
-        color: black;
-        font-size: 15px;
-        list-style: none;
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      transition: color 0.3s;
     }
 
-    .nav {
-        width :70px;
-        height: 30px;
-        border-radius: 10px;
-        text-decoration: none;
+    .navlinks a:hover {
+      color: #ff5252;
     }
 
-    ul {
-list-style: none;
-
+    .btn button {
+      padding: 8px 18px;
+      margin-left: 10px;
+      border: none;
+      border-radius: 25px;
+      background-color: #ff5252;
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s;
     }
-    
-.about-section {
+
+    .btn button:hover {
+      background-color: #ff7676;
+    }
+
+    /* HERO SECTION */
+    .container {
       display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 60px;
+      gap: 40px;
+    }
+
+    .firstdiv img {
+      max-height: 450px;
+      width: 100%;
+      max-width: 450px;
+      border-radius: 20px;
+    }
+
+    .seconddiv {
+      max-width: 600px;
+    }
+
+    .seconddiv h1 {
+      color: rgb(77, 181, 36);
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+
+    .seconddiv p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: white;
+    }
+
+    /* ABOUT SECTION */
+    .about-section {
+      display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
-      padding: 50px;
-      gap: 30px;
-      flex-wrap: wrap; /* Makes it responsive */
+      padding: 60px 40px;
+      background-color: #fff3d9;
+      border-top: 5px solid #ff5252;
     }
 
     .about-left {
       flex: 1;
       min-width: 300px;
-      background-color: #ffeb99;
       padding: 30px;
-      border-radius: 20px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      border: 3px solid #ff5252;
     }
 
     .about-left h2 {
@@ -92,10 +130,8 @@ list-style: none;
 
     .about-right {
       flex: 1;
-      min-width: 300px;
       display: flex;
       justify-content: center;
-      align-items: center;
     }
 
     .about-right img {
@@ -103,280 +139,161 @@ list-style: none;
       max-width: 350px;
       border-radius: 20px;
       border: 3px solid #ff5252;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     }
 
-    /* Responsive Design */
+    /* SERVICES SECTION */
+    .services-section {
+      text-align: center;
+      padding: 80px 40px;
+      background-color: #ffd6d6;
+    }
+
+    .services-title {
+      color: #ff5252;
+      font-size: 2.2rem;
+      margin-bottom: 40px;
+    }
+
+    .services-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .service-box {
+      background-color: #ffeb99;
+      border: 3px solid #ff5252;
+      border-radius: 20px;
+      width: 280px;
+      padding: 25px;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .service-box:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .service-box img {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 15px;
+    }
+
+    .service-box h3 {
+      color: #ff5252;
+      margin-bottom: 10px;
+    }
+
+    .service-box p {
+      font-size: 1rem;
+      color: #333;
+    }
+
+    /* RESPONSIVE */
     @media (max-width: 768px) {
-      .about-section {
+      .navbar {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .container {
         flex-direction: column;
         padding: 20px;
       }
 
-      .about-left, .about-right {
-        width: 100%;
-      }
-
-      .about-left h2 {
+      .seconddiv h1 {
         text-align: center;
       }
 
-      .about-right img {
-        max-width: 250px;
+      .about-section {
+        flex-direction: column;
+        padding: 30px 20px;
+      }
+
+      .services-container {
+        flex-direction: column;
+        align-items: center;
       }
     }
-
-    /* Fun Shinchan vibe */
-    .shinchan-style {
-      background-image: linear-gradient(135deg, #ffeb99 40%, #ffd6d6 100%);
-      animation: bounce 2s infinite alternate;
-    }
-
-    @keyframes bounce {
-      0% { transform: translateY(0); }
-      100% { transform: translateY(-5px); }
-    }
-.services-section {
-    text-align: center;
-    padding: 60px 40px;
-    background-color: #fff3d9;
-  }
-
-  .services-title {
-    color: #ff5252;
-    font-size: 2.2rem;
-    margin-bottom: 40px;
-    text-shadow: 1px 1px 0 #fff;
-  }
-
-  .services-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
-  }
-
-  .service-box {
-    background-color: #ffeb99;
-    border: 3px solid #ff5252;
-    border-radius: 20px;
-    width: 300px;
-    padding: 25px;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-
-  .service-box:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 15px rgba(0,0,0,0.3);
-  }
-
-  .service-box img {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 15px;
-  }
-
-  .service-box h3 {
-    color: #ff5252;
-    margin-bottom: 10px;
-  }
-
-  .service-box p {
-    font-size: 1rem;
-    color: #333;
-  }
-
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .service-box {
-      width: 100%;
-      max-width: 350px;
-    }
-  }
-  .shinchan-style { background: transparent; }
-.container { margin-bottom: 0; border: none; }
-
-.about-section {
-  background: linear-gradient(45deg, rgb(206, 64, 119), rgb(48, 48, 174));
-  background: transparent;
-}
-
-.services-section {
-  background: linear-gradient(45deg, rgb(206, 64, 119), rgb(48, 48, 174));
-  
-}
- .container {
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  border: none;
-  box-sizing: border-box;
-  gap: 20px;
-  padding: 30px;
-}
-
-.firstdiv, .seconddiv {
-  flex: 1 1 400px; /* flexible width for both */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.firstdiv img {
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-  display: block;
-  border-radius: 20px;
-}
-
-.bc {
-  margin-top: 20px;
-  font-size: 2rem;
-  color: #ff5252;
-  text-shadow: 1px 1px #fff;
-}
-
-.ab {
-  font-size: 1.2rem;
-  color: #333;
-  line-height: 1.6;
-  margin-top: 15px;
-  padding: 0 15px;
-  white-space: normal;
-}
-
-/* ✅ Responsive Design */
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    padding: 20px;
-  }
-
-  .firstdiv img {
-    max-width: 90%;
-  }
-
-  .bc {
-    font-size: 1.8rem;
-  }
-
-  .ab {
-    font-size: 1rem;
-    padding: 0 10px;
-  }
-}
-
- </style>
+  </style>
 </head>
 <body>
-    
-    <nav class="navbar">
-        
-        
-        
-        <img src="images/twitter.svg" alt="" class="left-img" height="50px"; width="50px"; >
+  <nav class="navbar">
+    <img src="images/twitter.svg" alt="Logo" />
+    <ul class="navlinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="jdjd.html">Contact Us</a></li>
+      <li><a href="#About">About Us</a></li>
+    </ul>
 
-        <ul class="navlinks">
-            
-        
-        <li><a href="index.html">Home</a></li>
-<li><a href="jdjd.html">Contact Us</a></li>
+    <div class="btn">
+      <a href="FORMS.HTML"><button>Sign Up</button></a>
+      <a href="login.html"><button>Login</button></a>
+    </div>
+  </nav>
 
-<li><a href="#About">About Us</a></li>
-<!-- <li><a href="http://">Service</a></li>
-<button class="nav">Click Me</button> -->
+  <div class="container">
+    <div class="firstdiv">
+      <img src="images/ILLUSTRATOR.png" alt="Illustration" />
+    </div>
 
-        </ul>
+    <div class="seconddiv">
+      <h1>Little Steps, Big Dreams!</h1>
+      <p>
+        A little boy sits by his desk, surrounded by books, pencils, and quiet dreams.  
+        His small hands turn each page with curiosity, his eyes filled with wonder.  
+        Every line he writes, every word he reads, becomes a tiny step toward something bigger.  
+        Sometimes he smiles at his thoughts, sometimes he frowns in focus —  
+        but he never stops trying, never stops learning.  
+        Because he knows that even the smallest efforts, made with heart,  
+        can one day build the brightest future.  
+        In his little world of colors and ideas,  
+        he’s not just studying — he’s creating his own story.
+      </p>
+    </div>
+  </div>
 
-<div class="btn">
-
-  <a href="FORMS.HTML"><button style="border: 10px; border-radius: 50px; background-color: bisque;">Sign Up</button></a>
-    <a href="login.html"><button style="background-color: blanchedalmond; border: 10px; border-radius: 15px;">Login</button></a>
-    
-    
-    
-</div>
-
-        
-        </nav>
-
-       
-        <div class="container">
-
-<div class="firstdiv">
-  <img src="images/ILLUSTRATOR.png" alt="" style="height: 500px; "
-  >
-</div>
-
-<div class="seconddiv">
-
-    <h1 class="bc">Little Steps, Big Dreams!</h1>
-<p class="ab" style="font-size: 25px;">
-A little boy sits by his desk, surrounded by books, pencils, and quiet dreams.  
-His small hands turn each page with curiosity, his eyes filled with wonder.  
-Every line he writes, every word he reads, becomes a tiny step toward something bigger.  
-Sometimes he smiles at his thoughts, sometimes he frowns in focus —  
-but he never stops trying, never stops learning.  
-Because he knows that even the smallest efforts, made with heart,  
-can one day build the brightest future.  
-In his little world of colors and ideas,  
-he’s not just studying — he’s creating his own story.
-</p>
-
-</div>
-</div>
-
-
-<section class="about-section shinchan-style" id="About">
+  <section class="about-section" id="About">
     <div class="about-left">
       <h2>About Me</h2>
       <p>
-        Hi there! I'm Rajat, a passionate learner and tech enthusiast 
-        I love exploring web development and creating fun, creative designs — just like Shinchan’s world full of color and laughter! 
-        
-    </p>
+        Hi there! I'm Rajat — a passionate learner and tech enthusiast.  
+        I love exploring web development and creating fun, creative designs —  
+        just like Shinchan’s world full of color and laughter!
+      </p>
     </div>
 
     <div class="about-right">
-      <!-- Add your image here -->
-      <img src="images/images.jpg" alt="My Photo">
+      <img src="images/images.jpg" alt="My Photo" />
     </div>
   </section>
 
-<section class="services-section shinchan-style">
-  <h2 class="services-title">My Services</h2>
+  <section class="services-section">
+    <h2 class="services-title">My Services</h2>
 
-  <div class="services-container">
-    <div class="service-box">
-      <img src="https://cdn-icons-png.flaticon.com/512/2721/2721298.png" alt="Web Design Icon">
-      <h3>Web Design</h3>
-      <p>I create fun, responsive, and colorful websites that work smoothly on all devices — just like Shinchan’s crazy energy!</p>
+    <div class="services-container">
+      <div class="service-box">
+        <img src="https://cdn-icons-png.flaticon.com/512/2721/2721298.png" alt="Web Design Icon" />
+        <h3>Web Design</h3>
+        <p>I create fun, responsive, and colorful websites that work smoothly on all devices — just like Shinchan’s crazy energy!</p>
+      </div>
+
+      <div class="service-box">
+        <img src="https://cdn-icons-png.flaticon.com/512/1006/1006363.png" alt="Development Icon" />
+        <h3>Web Development</h3>
+        <p>Clean, modern, and functional websites using HTML, CSS, and JavaScript — full of playful Shinchan vibes.</p>
+      </div>
+
+      <div class="service-box">
+        <img src="https://cdn-icons-png.flaticon.com/512/4221/4221379.png" alt="Creative Design Icon" />
+        <h3>Creative Design</h3>
+        <p>Bright colors, cartoonish layouts, and cheerful aesthetics to make every project look fun and unique!</p>
+      </div>
     </div>
-
-    <div class="service-box">
-      <img src="https://cdn-icons-png.flaticon.com/512/1006/1006363.png" alt="Development Icon">
-      <h3>Web Development</h3>
-      <p>Clean, modern, and functional web development with HTML, CSS, and JavaScript — full of playful Shinchan vibes.</p>
-    </div>
-
-    <div class="service-box">
-      <img src="https://cdn-icons-png.flaticon.com/512/4221/4221379.png" alt="Creative Design Icon">
-      <h3>Creative Design</h3>
-      <p>Bright colors, cartoonish layouts, and cheerful aesthetics to make every project look fun and unique!</p>
-    </div>
-  </div>
-</section>
-
+  </section>
 </body>
-
 </html>
-
-
-
